@@ -9,17 +9,18 @@ metadata:
     ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: hello-world-web
-            port:
-              number: 8080
+  - host: hello.world.sportal365.dev
+    http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: hello-world-web
+              port:
+                number: 8080
 
   tls:
   - hosts:
     - hello.world.sportal365.dev
-    secretName: account-key-staging
+    secretName: account-key-staging2
