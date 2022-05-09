@@ -15,7 +15,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: hello-node
+            name: hello-world-web
             port:
               number: 8080
 
